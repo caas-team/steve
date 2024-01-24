@@ -7,6 +7,9 @@ import (
 	"testing"
 	"time"
 
+	"github.com/caas-team/apiserver/pkg/server"
+	"github.com/caas-team/apiserver/pkg/store/empty"
+	"github.com/caas-team/apiserver/pkg/types"
 	"github.com/caas-team/steve/pkg/accesscontrol"
 	"github.com/caas-team/steve/pkg/attributes"
 	"github.com/caas-team/steve/pkg/clustercache"
@@ -15,9 +18,6 @@ import (
 	"github.com/rancher/wrangler/pkg/schemas"
 	"github.com/rancher/wrangler/pkg/summary"
 	"github.com/stretchr/testify/assert"
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/server"
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/store/empty"
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	schema2 "k8s.io/apimachinery/pkg/runtime/schema"
 )

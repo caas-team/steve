@@ -1,9 +1,9 @@
 package proxy
 
 import (
+	"github.com/caas-team/apiserver/pkg/types"
 	"github.com/rancher/wrangler/pkg/data"
 	"github.com/rancher/wrangler/pkg/data/convert"
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
 )
 
 // unformatterStore removes fields added by the formatter that kubernetes cannot recognize.

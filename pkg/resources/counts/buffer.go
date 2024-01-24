@@ -3,7 +3,7 @@ package counts
 import (
 	"time"
 
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
+	"github.com/caas-team/apiserver/pkg/types"
 )
 
 // debounceDuration determines how long events will be held before they are sent to the consumer

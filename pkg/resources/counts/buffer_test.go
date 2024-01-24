@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/caas-team/apiserver/pkg/types"
 	"github.com/stretchr/testify/assert"
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
 )
 
 func Test_countsBuffer(t *testing.T) {

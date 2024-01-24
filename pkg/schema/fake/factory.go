@@ -9,7 +9,7 @@ import (
 	reflect "reflect"
 
 	gomock "github.com/golang/mock/gomock"
-	types "gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
+	types "github.com/caas-team/apiserver/pkg/types"
 	schema "github.com/caas-team/steve/pkg/schema"
 	schema0 "k8s.io/apimachinery/pkg/runtime/schema"
 	user "k8s.io/apiserver/pkg/authentication/user"

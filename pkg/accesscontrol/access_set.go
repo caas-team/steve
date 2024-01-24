@@ -3,8 +3,8 @@ package accesscontrol
 import (
 	"sort"
 
+	"github.com/caas-team/apiserver/pkg/types"
 	"github.com/caas-team/steve/pkg/attributes"
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/util/sets"
 )

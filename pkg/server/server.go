@@ -5,6 +5,8 @@ import (
 	"errors"
 	"net/http"
 
+	apiserver "github.com/caas-team/apiserver/pkg/server"
+	"github.com/caas-team/apiserver/pkg/types"
 	"github.com/caas-team/steve/pkg/accesscontrol"
 	"github.com/caas-team/steve/pkg/aggregation"
 	"github.com/caas-team/steve/pkg/auth"
@@ -19,8 +21,6 @@ import (
 	"github.com/caas-team/steve/pkg/server/router"
 	"github.com/caas-team/steve/pkg/summarycache"
 	"github.com/rancher/dynamiclistener/server"
-	apiserver "gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/server"
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
 	"k8s.io/client-go/rest"
 )
 

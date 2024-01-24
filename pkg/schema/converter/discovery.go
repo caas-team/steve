@@ -3,11 +3,11 @@ package converter
 import (
 	"strings"
 
+	"github.com/caas-team/apiserver/pkg/types"
 	"github.com/caas-team/steve/pkg/attributes"
 	"github.com/rancher/wrangler/pkg/merr"
 	"github.com/rancher/wrangler/pkg/schemas"
 	"github.com/sirupsen/logrus"
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/client-go/discovery"

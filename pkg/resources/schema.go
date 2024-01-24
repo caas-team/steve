@@ -3,6 +3,9 @@ package resources
 import (
 	"context"
 
+	"github.com/caas-team/apiserver/pkg/store/apiroot"
+	"github.com/caas-team/apiserver/pkg/subscribe"
+	"github.com/caas-team/apiserver/pkg/types"
 	"github.com/caas-team/steve/pkg/accesscontrol"
 	"github.com/caas-team/steve/pkg/client"
 	"github.com/caas-team/steve/pkg/clustercache"
@@ -17,9 +20,6 @@ import (
 	"github.com/caas-team/steve/pkg/stores/proxy"
 	"github.com/caas-team/steve/pkg/summarycache"
 	corecontrollers "github.com/rancher/wrangler/pkg/generated/controllers/core/v1"
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/store/apiroot"
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/subscribe"
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
 	"k8s.io/apiserver/pkg/endpoints/request"
 	"k8s.io/client-go/discovery"
 )

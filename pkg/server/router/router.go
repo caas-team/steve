@@ -3,8 +3,8 @@ package router
 import (
 	"net/http"
 
+	"github.com/caas-team/apiserver/pkg/urlbuilder"
 	"github.com/gorilla/mux"
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/urlbuilder"
 )
 
 type RouterFunc func(h Handlers) http.Handler

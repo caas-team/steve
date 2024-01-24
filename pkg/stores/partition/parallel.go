@@ -5,7 +5,7 @@ import (
 	"encoding/base64"
 	"encoding/json"
 
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
+	"github.com/caas-team/apiserver/pkg/types"
 
 	"golang.org/x/sync/errgroup"
 	"golang.org/x/sync/semaphore"

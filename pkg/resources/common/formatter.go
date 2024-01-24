@@ -3,6 +3,7 @@ package common
 import (
 	"strings"
 
+	"github.com/caas-team/apiserver/pkg/types"
 	"github.com/caas-team/steve/pkg/accesscontrol"
 	"github.com/caas-team/steve/pkg/attributes"
 	"github.com/caas-team/steve/pkg/schema"
@@ -13,7 +14,6 @@ import (
 	corecontrollers "github.com/rancher/wrangler/pkg/generated/controllers/core/v1"
 	"github.com/rancher/wrangler/pkg/slice"
 	"github.com/rancher/wrangler/pkg/summary"
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
 	"k8s.io/apimachinery/pkg/api/meta"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"

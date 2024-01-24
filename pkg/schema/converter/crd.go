@@ -1,11 +1,11 @@
 package converter
 
 import (
+	"github.com/caas-team/apiserver/pkg/types"
 	"github.com/caas-team/steve/pkg/attributes"
 	"github.com/caas-team/steve/pkg/schema/table"
 	apiextv1 "github.com/rancher/wrangler/pkg/generated/controllers/apiextensions.k8s.io/v1"
 	"github.com/rancher/wrangler/pkg/schemas"
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
 	v1 "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"

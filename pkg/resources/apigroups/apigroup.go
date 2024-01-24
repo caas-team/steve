@@ -5,8 +5,8 @@ import (
 
 	"github.com/caas-team/steve/pkg/schema"
 
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/store/empty"
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
+	"github.com/caas-team/apiserver/pkg/store/empty"
+	"github.com/caas-team/apiserver/pkg/types"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/discovery"
 )

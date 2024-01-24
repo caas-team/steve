@@ -7,8 +7,8 @@ import (
 	"path/filepath"
 
 	"github.com/adrg/xdg"
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/store/empty"
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
+	"github.com/caas-team/apiserver/pkg/store/empty"
+	"github.com/caas-team/apiserver/pkg/types"
 	"k8s.io/apiserver/pkg/endpoints/request"
 )
 

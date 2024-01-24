@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"strconv"
 
+	"github.com/caas-team/apiserver/pkg/apierror"
 	"github.com/prometheus/client_golang/prometheus"
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/apierror"
 )
 
 type MetricLogger struct {

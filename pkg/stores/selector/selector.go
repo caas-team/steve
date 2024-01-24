@@ -1,7 +1,7 @@
 package selector
 
 import (
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
+	"github.com/caas-team/apiserver/pkg/types"
 	"k8s.io/apimachinery/pkg/labels"
 )
 

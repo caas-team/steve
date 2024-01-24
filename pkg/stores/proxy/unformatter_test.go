@@ -3,8 +3,8 @@ package proxy
 import (
 	"testing"
 
+	"github.com/caas-team/apiserver/pkg/types"
 	"github.com/stretchr/testify/assert"
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
 )
 
 func Test_unformat(t *testing.T) {

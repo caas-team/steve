@@ -6,6 +6,7 @@ import (
 	"sync/atomic"
 	"time"
 
+	"github.com/caas-team/apiserver/pkg/types"
 	"github.com/caas-team/steve/pkg/attributes"
 	"github.com/caas-team/steve/pkg/resources/common"
 	schema2 "github.com/caas-team/steve/pkg/schema"
@@ -13,7 +14,6 @@ import (
 	apiextcontrollerv1 "github.com/rancher/wrangler/pkg/generated/controllers/apiextensions.k8s.io/v1"
 	v1 "github.com/rancher/wrangler/pkg/generated/controllers/apiregistration.k8s.io/v1"
 	"github.com/sirupsen/logrus"
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
 	"golang.org/x/sync/errgroup"
 	"golang.org/x/sync/semaphore"
 	authorizationv1 "k8s.io/api/authorization/v1"

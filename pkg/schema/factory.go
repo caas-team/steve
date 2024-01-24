@@ -7,10 +7,10 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/caas-team/apiserver/pkg/builtin"
+	"github.com/caas-team/apiserver/pkg/types"
 	"github.com/caas-team/steve/pkg/accesscontrol"
 	"github.com/caas-team/steve/pkg/attributes"
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/builtin"
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apiserver/pkg/authentication/user"
 )

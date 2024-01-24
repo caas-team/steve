@@ -9,8 +9,8 @@ import (
 	"path/filepath"
 	"sync"
 
+	"github.com/caas-team/apiserver/pkg/middleware"
 	"github.com/sirupsen/logrus"
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/middleware"
 )
 
 var (

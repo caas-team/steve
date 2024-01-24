@@ -8,6 +8,7 @@ import (
 	"testing"
 	"time"
 
+	"github.com/caas-team/apiserver/pkg/types"
 	"github.com/caas-team/steve/pkg/accesscontrol"
 	acfake "github.com/caas-team/steve/pkg/accesscontrol/fake"
 	"github.com/caas-team/steve/pkg/attributes"
@@ -16,7 +17,6 @@ import (
 	"github.com/golang/mock/gomock"
 	v1schema "github.com/rancher/wrangler/pkg/schemas"
 	"github.com/stretchr/testify/assert"
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
 	"k8s.io/apiserver/pkg/authentication/user"
 	"k8s.io/apiserver/pkg/endpoints/request"
 )

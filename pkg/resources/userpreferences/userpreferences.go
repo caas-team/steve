@@ -3,7 +3,7 @@ package userpreferences
 import (
 	"net/http"
 
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
+	"github.com/caas-team/apiserver/pkg/types"
 )
 
 type UserPreference struct {

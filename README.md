@@ -270,10 +270,10 @@ Steve Features
 --------------
 
 Steve's main use is as an opinionated consumer of
-[rancher/apiserver](https://gitlab.devops.telekom.de/caas/rancher/apiserver), which it uses to
+[rancher/apiserver](https://github.com/caas-team/apiserver), which it uses to
 dynamically register every Kubernetes API as its own. It implements
 apiserver
-[Stores](https://pkg.go.dev/gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types#Store) to
+[Stores](https://pkg.go.dev/github.com/caas-team/apiserver/pkg/types#Store) to
 use Kubernetes as its data store.
 
 ### Stores
@@ -345,7 +345,7 @@ resource for preference storage instead.
 Counts keeps track of the number of resources and updates the count in a
 buffered stream that the dashboard can subscribe to.
 
-#### [Subscribe](https://gitlab.devops.telekom.de/caas/rancher/apiserver/tree/master/pkg/subscribe)
+#### [Subscribe](https://github.com/caas-team/apiserver/tree/master/pkg/subscribe)
 
 Steve exposes a websocket endpoint on /v1/subscribe for sending streams of
 events. Connect to the endpoint using a websocket client like websocat:
@@ -354,7 +354,7 @@ events. Connect to the endpoint using a websocket client like websocat:
 websocat -k wss://127.0.0.1:9443/v1/subscribe
 ```
 
-Review the [apiserver](https://gitlab.devops.telekom.de/caas/rancher/apiserver#subscribe) guide
+Review the [apiserver](https://github.com/caas-team/apiserver#subscribe) guide
 for details.
 
 In addition to regular Kubernetes resources, steve allows you to subscribe to
@@ -375,8 +375,8 @@ data is always redacted, you could implement a store like this:
 
 ```go
 import (
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/store/empty"
-	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
+	"github.com/caas-team/apiserver/pkg/store/empty"
+	"github.com/caas-team/apiserver/pkg/types"
 )
 
 type redactStore struct {
@@ -461,7 +461,7 @@ Steve implements access control on schemas based on the user's RBAC in
 Kubernetes.
 
 The apiserver
-[`Server`](https://pkg.go.dev/gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/server#Server)
+[`Server`](https://pkg.go.dev/github.com/caas-team/apiserver/pkg/server#Server)
 object exposes an AccessControl field which is used to customize how access
 control is performed on server requests.
 
@@ -482,7 +482,7 @@ checked for existence in the AccessSet, and filtered out if it is not
 available.
 
 This final set of schemas is inserted into the
-[`types.APIRequest`](https://pkg.go.dev/gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types#APIRequest)
+[`types.APIRequest`](https://pkg.go.dev/github.com/caas-team/apiserver/pkg/types#APIRequest)
 object and passed to the apiserver handler.
 
 ### Authentication
@@ -683,13 +683,13 @@ From here, the list is passed to the
 [listprocessor](https://pkg.go.dev/github.com/caas-team/steve/pkg/stores/partition/listprocessor)
 to filter, sort, and paginate the list. The partition store formats the list as
 a
-[types.APIObjectList](https://pkg.go.dev/gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types#APIObjectList)
+[types.APIObjectList](https://pkg.go.dev/github.com/caas-team/apiserver/pkg/types#APIObjectList)
 and it is returned up the chain of nested stores.
 
 Most stores in steve are implementations of the apiserver
-[Store](https://pkg.go.dev/gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types#Store)
+[Store](https://pkg.go.dev/github.com/caas-team/apiserver/pkg/types#Store)
 interface, which returns apiserver
-[types](https://pkg.go.dev/gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types). The
+[types](https://pkg.go.dev/github.com/caas-team/apiserver/pkg/types). The
 partitioner implements its own store type called
 [UnstructuredStore](https://pkg.go.dev/github.com/caas-team/steve/pkg/stores/partition#UnstructuredStore)
 which returns
