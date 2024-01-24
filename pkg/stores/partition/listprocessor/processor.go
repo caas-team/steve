@@ -7,10 +7,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/rancher/apiserver/pkg/types"
 	"github.com/rancher/wrangler/pkg/data"
 	"github.com/rancher/wrangler/pkg/data/convert"
 	corecontrollers "github.com/rancher/wrangler/pkg/generated/controllers/core/v1"
+	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 )
 

@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/rancher/apiserver/pkg/urlbuilder"
+	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/urlbuilder"
 )
 
 type RouterFunc func(h Handlers) http.Handler

@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/rancher/apiserver/pkg/types"
 	"github.com/rancher/steve/pkg/accesscontrol"
 	"github.com/rancher/steve/pkg/attributes"
 	"github.com/rancher/steve/pkg/stores/partition"
 	"github.com/rancher/wrangler/pkg/kv"
+	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/util/sets"
 	"k8s.io/apimachinery/pkg/watch"

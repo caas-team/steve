@@ -3,9 +3,6 @@ package resources
 import (
 	"context"
 
-	"github.com/rancher/apiserver/pkg/store/apiroot"
-	"github.com/rancher/apiserver/pkg/subscribe"
-	"github.com/rancher/apiserver/pkg/types"
 	"github.com/rancher/steve/pkg/accesscontrol"
 	"github.com/rancher/steve/pkg/client"
 	"github.com/rancher/steve/pkg/clustercache"
@@ -20,6 +17,9 @@ import (
 	"github.com/rancher/steve/pkg/stores/proxy"
 	"github.com/rancher/steve/pkg/summarycache"
 	corecontrollers "github.com/rancher/wrangler/pkg/generated/controllers/core/v1"
+	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/store/apiroot"
+	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/subscribe"
+	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
 	"k8s.io/apiserver/pkg/endpoints/request"
 	"k8s.io/client-go/discovery"
 )

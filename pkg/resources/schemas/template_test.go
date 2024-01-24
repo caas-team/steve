@@ -9,7 +9,6 @@ import (
 	"time"
 
 	"github.com/golang/mock/gomock"
-	"github.com/rancher/apiserver/pkg/types"
 	"github.com/rancher/steve/pkg/accesscontrol"
 	acfake "github.com/rancher/steve/pkg/accesscontrol/fake"
 	"github.com/rancher/steve/pkg/attributes"
@@ -17,6 +16,7 @@ import (
 	schemafake "github.com/rancher/steve/pkg/schema/fake"
 	v1schema "github.com/rancher/wrangler/pkg/schemas"
 	"github.com/stretchr/testify/assert"
+	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
 	"k8s.io/apiserver/pkg/authentication/user"
 	"k8s.io/apiserver/pkg/endpoints/request"
 )

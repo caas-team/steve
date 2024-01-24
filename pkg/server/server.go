@@ -5,8 +5,6 @@ import (
 	"errors"
 	"net/http"
 
-	apiserver "github.com/rancher/apiserver/pkg/server"
-	"github.com/rancher/apiserver/pkg/types"
 	"github.com/rancher/dynamiclistener/server"
 	"github.com/rancher/steve/pkg/accesscontrol"
 	"github.com/rancher/steve/pkg/aggregation"
@@ -21,6 +19,8 @@ import (
 	"github.com/rancher/steve/pkg/server/handler"
 	"github.com/rancher/steve/pkg/server/router"
 	"github.com/rancher/steve/pkg/summarycache"
+	apiserver "gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/server"
+	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
 	"k8s.io/client-go/rest"
 )
 

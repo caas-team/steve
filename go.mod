@@ -17,7 +17,6 @@ require (
 	github.com/pborman/uuid v1.2.1
 	github.com/pkg/errors v0.9.1
 	github.com/prometheus/client_golang v1.16.0
-	github.com/rancher/apiserver v0.0.0-20230831052300-120e615b17ba
 	github.com/rancher/dynamiclistener v0.3.6-rc2.0.20230831052350-0132d96ec2c5
 	github.com/rancher/kubernetes-provider-detector v0.1.5
 	github.com/rancher/norman v0.0.0-20230831160711-5de27f66385d
@@ -27,6 +26,7 @@ require (
 	github.com/stretchr/testify v1.8.4
 	github.com/urfave/cli v1.22.14
 	github.com/urfave/cli/v2 v2.25.7
+	gitlab.devops.telekom.de/caas/rancher/apiserver v0.0.0-20240124101749-f82a882c4527
 	golang.org/x/sync v0.3.0
 	k8s.io/api v0.27.4
 	k8s.io/apiextensions-apiserver v0.27.4

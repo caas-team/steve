@@ -7,10 +7,10 @@ import (
 	"time"
 
 	"github.com/pkg/errors"
-	"github.com/rancher/apiserver/pkg/types"
 	"github.com/rancher/steve/pkg/client"
 	"github.com/rancher/wrangler/pkg/schemas"
 	"github.com/stretchr/testify/assert"
+	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
 	"golang.org/x/sync/errgroup"
 	v1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

@@ -4,8 +4,8 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/rancher/apiserver/pkg/types"
 	"github.com/stretchr/testify/assert"
+	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	schema2 "k8s.io/apimachinery/pkg/runtime/schema"
 )

@@ -3,15 +3,15 @@ package handler
 import (
 	"net/http"
 
-	apiserver "github.com/rancher/apiserver/pkg/server"
-	"github.com/rancher/apiserver/pkg/types"
-	"github.com/rancher/apiserver/pkg/urlbuilder"
 	"github.com/rancher/steve/pkg/accesscontrol"
 	"github.com/rancher/steve/pkg/auth"
 	k8sproxy "github.com/rancher/steve/pkg/proxy"
 	"github.com/rancher/steve/pkg/schema"
 	"github.com/rancher/steve/pkg/server/router"
 	"github.com/sirupsen/logrus"
+	apiserver "gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/server"
+	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
+	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/urlbuilder"
 	"k8s.io/apiserver/pkg/endpoints/request"
 	"k8s.io/client-go/rest"
 )

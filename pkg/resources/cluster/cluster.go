@@ -4,8 +4,6 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/rancher/apiserver/pkg/store/empty"
-	"github.com/rancher/apiserver/pkg/types"
 	detector "github.com/rancher/kubernetes-provider-detector"
 	"github.com/rancher/steve/pkg/accesscontrol"
 	"github.com/rancher/steve/pkg/attributes"
@@ -13,6 +11,8 @@ import (
 	"github.com/rancher/steve/pkg/stores/proxy"
 	"github.com/rancher/wrangler/pkg/genericcondition"
 	"github.com/rancher/wrangler/pkg/schemas"
+	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/store/empty"
+	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	schema2 "k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/version"

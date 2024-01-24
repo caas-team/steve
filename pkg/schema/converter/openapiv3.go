@@ -1,8 +1,8 @@
 package converter
 
 import (
-	"github.com/rancher/apiserver/pkg/types"
 	"github.com/rancher/wrangler/pkg/schemas"
+	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
 	v1 "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"
 )
 

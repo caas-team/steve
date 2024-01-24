@@ -13,7 +13,6 @@ import (
 	"strconv"
 
 	"github.com/pkg/errors"
-	"github.com/rancher/apiserver/pkg/types"
 	"github.com/rancher/steve/pkg/accesscontrol"
 	"github.com/rancher/steve/pkg/attributes"
 	metricsStore "github.com/rancher/steve/pkg/stores/metrics"
@@ -23,6 +22,7 @@ import (
 	"github.com/rancher/wrangler/pkg/schemas/validation"
 	"github.com/rancher/wrangler/pkg/summary"
 	"github.com/sirupsen/logrus"
+	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
 	"golang.org/x/sync/errgroup"
 	"k8s.io/apimachinery/pkg/api/meta"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

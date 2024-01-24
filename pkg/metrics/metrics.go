@@ -5,7 +5,7 @@ import (
 	"strconv"
 
 	"github.com/prometheus/client_golang/prometheus"
-	"github.com/rancher/apiserver/pkg/apierror"
+	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/apierror"
 )
 
 type MetricLogger struct {

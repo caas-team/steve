@@ -5,8 +5,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"testing"
 
-	"github.com/rancher/apiserver/pkg/types"
 	"github.com/rancher/wrangler/pkg/schemas"
+	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
 	k8sSchema "k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apiserver/pkg/authentication/user"
 )

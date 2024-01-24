@@ -1,8 +1,8 @@
 package formatters
 
 import (
-	"github.com/rancher/apiserver/pkg/types"
 	"github.com/rancher/norman/types/convert"
+	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
 )
 
 func DropHelmData(request *types.APIRequest, resource *types.RawResource) {
