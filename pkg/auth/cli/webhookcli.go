@@ -4,8 +4,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/rancher/steve/pkg/auth"
 	"github.com/urfave/cli"
+	"gitlab.devops.telekom.de/caas/rancher/steve/pkg/auth"
 	"k8s.io/client-go/tools/clientcmd"
 )
 

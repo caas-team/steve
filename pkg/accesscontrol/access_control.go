@@ -1,10 +1,10 @@
 package accesscontrol
 
 import (
-	"github.com/rancher/steve/pkg/attributes"
 	"github.com/rancher/wrangler/pkg/kv"
 	apiserver "gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/server"
 	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
+	"gitlab.devops.telekom.de/caas/rancher/steve/pkg/attributes"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 )
 

@@ -238,7 +238,7 @@ import (
 	"fmt"
 	"context"
 
-	"github.com/rancher/steve/pkg/server"
+	"gitlab.devops.telekom.de/caas/rancher/steve/pkg/server"
 	"github.com/rancher/wrangler/pkg/kubeconfig"
 )
 
@@ -281,38 +281,38 @@ use Kubernetes as its data store.
 Steve uses apiserver Stores to transform and store data, mainly in Kubernetes.
 The main mechanism it uses is the proxy store, which is actually a series of
 four nested stores and a "partitioner". It can be instantiated by calling
-[NewProxyStore](https://pkg.go.dev/github.com/rancher/steve/pkg/stores/proxy#NewProxyStore).
+[NewProxyStore](https://pkg.go.dev/gitlab.devops.telekom.de/caas/rancher/steve/pkg/stores/proxy#NewProxyStore).
 This gives you:
 
-* [`proxy.errorStore`](https://github.com/rancher/steve/blob/master/pkg/stores/proxy/error_wrapper.go) -
+* [`proxy.errorStore`](https://gitlab.devops.telekom.de/caas/rancher/steve/blob/master/pkg/stores/proxy/error_wrapper.go) -
   translates any returned errors into HTTP errors
-* [`proxy.WatchRefresh`](https://pkg.go.dev/github.com/rancher/steve/pkg/stores/proxy#WatchRefresh) -
+* [`proxy.WatchRefresh`](https://pkg.go.dev/gitlab.devops.telekom.de/caas/rancher/steve/pkg/stores/proxy#WatchRefresh) -
   wraps the nested store's Watch method, canceling the watch if access to the
   watched resource changes
-* [`partition.Store`](https://pkg.go.dev/github.com/rancher/steve/pkg/stores/partition#Store) -
+* [`partition.Store`](https://pkg.go.dev/gitlab.devops.telekom.de/caas/rancher/steve/pkg/stores/partition#Store) -
   wraps the nested store's List method and parallelizes the request according
   to the given partitioner, and additionally implements filtering, sorting, and
   pagination on the unstructured data from the nested store
-* [`proxy.rbacPartitioner`](https://github.com/rancher/steve/blob/master/pkg/stores/proxy/rbac_store.go) -
+* [`proxy.rbacPartitioner`](https://gitlab.devops.telekom.de/caas/rancher/steve/blob/master/pkg/stores/proxy/rbac_store.go) -
   the partitioner fed to the `partition.Store` which allows it to parallelize
   requests based on the user's access to certain namespaces or resources
-* [`proxy.Store`](https://pkg.go.dev/github.com/rancher/steve/pkg/stores/proxy#Store) -
+* [`proxy.Store`](https://pkg.go.dev/gitlab.devops.telekom.de/caas/rancher/steve/pkg/stores/proxy#Store) -
   the Kubernetes proxy store which performs the actual connection to Kubernetes
   for all operations
 
 The default schema additionally wraps this proxy store in
-[`metrics.Store`](https://pkg.go.dev/github.com/rancher/steve/pkg/stores/metrics#Store),
+[`metrics.Store`](https://pkg.go.dev/gitlab.devops.telekom.de/caas/rancher/steve/pkg/stores/metrics#Store),
 which records request metrics to Prometheus, by calling
-[`metrics.NewMetricsStore`](https://pkg.go.dev/github.com/rancher/steve/pkg/stores/metrics#NewMetricsStore)
+[`metrics.NewMetricsStore`](https://pkg.go.dev/gitlab.devops.telekom.de/caas/rancher/steve/pkg/stores/metrics#NewMetricsStore)
 on it.
 
 Steve provides two additional exported stores that are mainly used by Rancher's
 [catalogv2](https://github.com/rancher/rancher/tree/release/v2.7/pkg/catalogv2)
 package:
 
-* [`selector.Store`](https://pkg.go.dev/github.com/rancher/steve/pkg/stores/selector#Store)
+* [`selector.Store`](https://pkg.go.dev/gitlab.devops.telekom.de/caas/rancher/steve/pkg/stores/selector#Store)
   - wraps the list and watch commands with a label selector
-* [`switchschema.Store`](https://pkg.go.dev/github.com/rancher/steve/pkg/stores/switchschema#Store)
+* [`switchschema.Store`](https://pkg.go.dev/gitlab.devops.telekom.de/caas/rancher/steve/pkg/stores/switchschema#Store)
   - transforms the object's schema
 
 ### Schemas
@@ -320,11 +320,11 @@ package:
 Steve watches all Kubernetes API resources, including built-ins, CRDs, and
 APIServices, and registers them under its own /v1 endpoint. The component
 responsible for watching and registering these schemas is the [schema
-controller](https://github.com/rancher/steve/blob/master/pkg/controllers/schema/schemas.go).
+controller](https://gitlab.devops.telekom.de/caas/rancher/steve/blob/master/pkg/controllers/schema/schemas.go).
 Schemas can be queried from the /v1/schemas endpoint. Steve also registers a
 few of its own schemas not from Kubernetes to facilitate certain use cases.
 
-#### [Cluster](https://github.com/rancher/steve/tree/master/pkg/resources/cluster)
+#### [Cluster](https://gitlab.devops.telekom.de/caas/rancher/steve/tree/master/pkg/resources/cluster)
 
 Steve creates a fake local cluster to use in standalone scenarios when there is
 not a real
@@ -332,7 +332,7 @@ not a real
 resource available. Rancher overrides this and sets its own customizations on
 the cluster resource.
 
-#### [User Preferences](https://github.com/rancher/steve/tree/master/pkg/resources/userpreferences)
+#### [User Preferences](https://gitlab.devops.telekom.de/caas/rancher/steve/tree/master/pkg/resources/userpreferences)
 
 User preferences in steve provides a way to configure dashboard preferences
 through a configuration file named ``prefs.json``. Rancher overrides this and
@@ -340,7 +340,7 @@ uses the
 [preferences.management.cattle.io](https://pkg.go.dev/github.com/rancher/rancher/pkg/apis/management.cattle.io/v3#Preference)
 resource for preference storage instead.
 
-#### [Counts](https://github.com/rancher/steve/tree/master/pkg/resources/counts)
+#### [Counts](https://gitlab.devops.telekom.de/caas/rancher/steve/tree/master/pkg/resources/counts)
 
 Counts keeps track of the number of resources and updates the count in a
 buffered stream that the dashboard can subscribe to.
@@ -411,7 +411,7 @@ that store:
 
 ```go
 import (
-	"github.com/rancher/steve/pkg/schema"
+	"gitlab.devops.telekom.de/caas/rancher/steve/pkg/schema"
 )
 
 template := schema.Template{
@@ -466,13 +466,13 @@ object exposes an AccessControl field which is used to customize how access
 control is performed on server requests.
 
 An
-[`accesscontrol.AccessStore`](https://pkg.go.dev/github.com/rancher/steve/pkg/accesscontrol#AccessStore)
+[`accesscontrol.AccessStore`](https://pkg.go.dev/gitlab.devops.telekom.de/caas/rancher/steve/pkg/accesscontrol#AccessStore)
 is stored on the schema factory. When a user makes any request, the request
 handler first finds all the schemas that are available to the user. To do this,
 it first retrieves an
-[`accesscontrol.AccessSet`](https://pkg.go.dev/github.com/rancher/steve/pkg/accesscontrol#AccessSet)
+[`accesscontrol.AccessSet`](https://pkg.go.dev/gitlab.devops.telekom.de/caas/rancher/steve/pkg/accesscontrol#AccessSet)
 by calling
-[`AccessFor`](https://pkg.go.dev/github.com/rancher/steve/pkg/accesscontrol#AccessStore.AccessFor)
+[`AccessFor`](https://pkg.go.dev/gitlab.devops.telekom.de/caas/rancher/steve/pkg/accesscontrol#AccessStore.AccessFor)
 on the user. The AccessSet contains a map of resources and the verbs that can
 be used on them. The AccessSet is calculated by looking up all of the user's
 role bindings and cluster role bindings for the user's name and group. The
@@ -489,7 +489,7 @@ object and passed to the apiserver handler.
 
 Steve authenticates incoming requests using a customizable authentication
 middleware. The default authenticator in standalone steve is the
-[AlwaysAdmin](https://pkg.go.dev/github.com/rancher/steve/pkg/auth#AlwaysAdmin)
+[AlwaysAdmin](https://pkg.go.dev/gitlab.devops.telekom.de/caas/rancher/steve/pkg/auth#AlwaysAdmin)
 middleware, which accepts all incoming requests and sets admin attributes on
 the user. The authenticator can be overridden by passing a custom middleware to
 the steve server:
@@ -497,8 +497,8 @@ the steve server:
 ```go
 import (
 	"context"
-	"github.com/rancher/steve/pkg/server"
-	"github.com/rancher/steve/pkg/auth"
+	"gitlab.devops.telekom.de/caas/rancher/steve/pkg/server"
+	"gitlab.devops.telekom.de/caas/rancher/steve/pkg/auth"
 	"k8s.io/apiserver/pkg/authentication/user"
 )
 
@@ -531,10 +531,10 @@ Once the user is authenticated, if the request is for a Kubernetes resource,
 then steve must proxy the request to Kubernetes, so it needs to transform the
 request. Steve passes the user Info object from the authenticator to a proxy
 handler, either a generic handler or an impersonating handler. The generic
-[Handler](https://pkg.go.dev/github.com/rancher/steve/pkg/proxy#Handler) mainly
+[Handler](https://pkg.go.dev/gitlab.devops.telekom.de/caas/rancher/steve/pkg/proxy#Handler) mainly
 sets transport options and cleans up the headers on the request in preparation
 for forwarding it to Kubernetes. The
-[ImpersonatingHandler](https://pkg.go.dev/github.com/rancher/steve/pkg/proxy#ImpersonatingHandler)
+[ImpersonatingHandler](https://pkg.go.dev/gitlab.devops.telekom.de/caas/rancher/steve/pkg/proxy#ImpersonatingHandler)
 uses the user Info object to set Impersonate-* headers on the request, which
 Kubernetes uses to decide access.
 
@@ -546,14 +546,14 @@ Vue UI hosted on releases.rancher.com. It can be viewed by visiting the running
 steve instance on port 9443 in a browser.
 
 The UI can be enabled and customized by passing options to
-[NewUIHandler](https://pkg.go.dev/github.com/rancher/steve/pkg/ui#NewUIHandler).
+[NewUIHandler](https://pkg.go.dev/gitlab.devops.telekom.de/caas/rancher/steve/pkg/ui#NewUIHandler).
 For example, if you have an alternative index.html file, add the file to
 a directory called `./ui`, then create a route that serves a custom UI handler:
 
 ```go
 import (
 	"net/http"
-	"github.com/rancher/steve/pkg/ui"
+	"gitlab.devops.telekom.de/caas/rancher/steve/pkg/ui"
 	"github.com/gorilla/mux"
 )
 
@@ -582,7 +582,7 @@ secrets:
 ```go
 import (
 	"context"
-	"github.com/rancher/steve/pkg/server"
+	"gitlab.devops.telekom.de/caas/rancher/steve/pkg/server"
 	"k8s.io/apimachinery/pkg/runtime"
 	"github.com/sirupsen/logrus"
 	"k8s.io/apimachinery/pkg/runtime/schema"
@@ -610,7 +610,7 @@ server:
 ```go
 import (
 	"context"
-	"github.com/rancher/steve/pkg/server"
+	"gitlab.devops.telekom.de/caas/rancher/steve/pkg/server"
 )
 
 func run() {
@@ -669,18 +669,18 @@ friendly way.
 
 This feature relies on the concept of [stores](#stores) and the RBAC
 partitioner. The [proxy
-store](https://pkg.go.dev/github.com/rancher/steve/pkg/stores/proxy#Store)
+store](https://pkg.go.dev/gitlab.devops.telekom.de/caas/rancher/steve/pkg/stores/proxy#Store)
 provides raw access to Kubernetes and returns data as an
 [unstructured.UnstructuredList](https://pkg.go.dev/k8s.io/apimachinery/pkg/apis/meta/v1/unstructured#UnstructuredList).
 The
-[partitioner](https://pkg.go.dev/github.com/rancher/steve/pkg/stores/partition#Partitioner)
+[partitioner](https://pkg.go.dev/gitlab.devops.telekom.de/caas/rancher/steve/pkg/stores/partition#Partitioner)
 calls the
 proxy store in parallel for each segment of resources the user has access to,
 such as for each namespace. The partitioner feeds the results of each parallelized
 request into a stream of
 [unstructured.Unstructured](https://pkg.go.dev/k8s.io/apimachinery/pkg/apis/meta/v1/unstructured#Unstructured).
 From here, the list is passed to the
-[listprocessor](https://pkg.go.dev/github.com/rancher/steve/pkg/stores/partition/listprocessor)
+[listprocessor](https://pkg.go.dev/gitlab.devops.telekom.de/caas/rancher/steve/pkg/stores/partition/listprocessor)
 to filter, sort, and paginate the list. The partition store formats the list as
 a
 [types.APIObjectList](https://pkg.go.dev/gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types#APIObjectList)
@@ -691,7 +691,7 @@ Most stores in steve are implementations of the apiserver
 interface, which returns apiserver
 [types](https://pkg.go.dev/gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types). The
 partitioner implements its own store type called
-[UnstructuredStore](https://pkg.go.dev/github.com/rancher/steve/pkg/stores/partition#UnstructuredStore)
+[UnstructuredStore](https://pkg.go.dev/gitlab.devops.telekom.de/caas/rancher/steve/pkg/stores/partition#UnstructuredStore)
 which returns
 [unstructured.Unstructured](https://pkg.go.dev/k8s.io/apimachinery/pkg/apis/meta/v1/unstructured#Unstructured)
 objects. The reason for this is that the filtering and sorting functions in the
@@ -736,7 +736,7 @@ Each table test runs several requests, so they are effectively each a bundle of
 tests. Each table test has a list of `apiOps` which each specify the request
 and the user running it, a list of `access` maps which declares the users
 corresponding to each request and controls the
-[AccessSet](https://pkg.go.dev/github.com/rancher/steve/pkg/accesscontrol#AccessSet)
+[AccessSet](https://pkg.go.dev/gitlab.devops.telekom.de/caas/rancher/steve/pkg/accesscontrol#AccessSet)
 the user has, the `partitions` the users have access to, and the `objects` in
 each partition. The requests in `apiOps` are run sequentially, and each item in
 the lists `want`, `wantCache`, and `wantListCalls` correlate to the expected

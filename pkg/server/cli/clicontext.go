@@ -3,13 +3,13 @@ package cli
 import (
 	"context"
 
-	steveauth "github.com/rancher/steve/pkg/auth"
-	authcli "github.com/rancher/steve/pkg/auth/cli"
-	"github.com/rancher/steve/pkg/server"
-	"github.com/rancher/steve/pkg/ui"
 	"github.com/rancher/wrangler/pkg/kubeconfig"
 	"github.com/rancher/wrangler/pkg/ratelimit"
 	"github.com/urfave/cli"
+	steveauth "gitlab.devops.telekom.de/caas/rancher/steve/pkg/auth"
+	authcli "gitlab.devops.telekom.de/caas/rancher/steve/pkg/auth/cli"
+	"gitlab.devops.telekom.de/caas/rancher/steve/pkg/server"
+	"gitlab.devops.telekom.de/caas/rancher/steve/pkg/ui"
 )
 
 type Config struct {

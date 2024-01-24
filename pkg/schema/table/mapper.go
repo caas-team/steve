@@ -1,11 +1,11 @@
 package table
 
 import (
-	"github.com/rancher/steve/pkg/attributes"
 	"github.com/rancher/wrangler/pkg/data"
 	types "github.com/rancher/wrangler/pkg/schemas"
 	"github.com/rancher/wrangler/pkg/schemas/mappers"
 	types2 "gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
+	"gitlab.devops.telekom.de/caas/rancher/steve/pkg/attributes"
 )
 
 type Column struct {

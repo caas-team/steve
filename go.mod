@@ -1,4 +1,4 @@
-module github.com/rancher/steve
+module gitlab.devops.telekom.de/caas/rancher/steve
 
 go 1.20
 

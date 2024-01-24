@@ -3,12 +3,12 @@ package main
 import (
 	"os"
 
-	"github.com/rancher/steve/pkg/debug"
-	stevecli "github.com/rancher/steve/pkg/server/cli"
-	"github.com/rancher/steve/pkg/version"
 	"github.com/rancher/wrangler/pkg/signals"
 	"github.com/sirupsen/logrus"
 	"github.com/urfave/cli"
+	"gitlab.devops.telekom.de/caas/rancher/steve/pkg/debug"
+	stevecli "gitlab.devops.telekom.de/caas/rancher/steve/pkg/server/cli"
+	"gitlab.devops.telekom.de/caas/rancher/steve/pkg/version"
 )
 
 var (

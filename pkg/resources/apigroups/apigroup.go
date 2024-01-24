@@ -3,7 +3,7 @@ package apigroups
 import (
 	"net/http"
 
-	"github.com/rancher/steve/pkg/schema"
+	"gitlab.devops.telekom.de/caas/rancher/steve/pkg/schema"
 
 	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/store/empty"
 	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
