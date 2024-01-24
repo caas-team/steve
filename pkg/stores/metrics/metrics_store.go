@@ -3,8 +3,8 @@ package metrics
 import (
 	"time"
 
+	"github.com/caas-team/steve/pkg/metrics"
 	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
-	"gitlab.devops.telekom.de/caas/rancher/steve/pkg/metrics"
 )
 
 type Store struct {

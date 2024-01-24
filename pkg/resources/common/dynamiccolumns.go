@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
+	"github.com/caas-team/steve/pkg/attributes"
 	"github.com/rancher/wrangler/pkg/ratelimit"
 	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
-	"gitlab.devops.telekom.de/caas/rancher/steve/pkg/attributes"
 	"k8s.io/apimachinery/pkg/apis/meta/internalversion"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	metav1beta1 "k8s.io/apimachinery/pkg/apis/meta/v1beta1"

@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/caas-team/steve/pkg/attributes"
 	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
-	"gitlab.devops.telekom.de/caas/rancher/steve/pkg/attributes"
 	"k8s.io/apiserver/pkg/endpoints/request"
 	"k8s.io/client-go/dynamic"
 	"k8s.io/client-go/kubernetes"

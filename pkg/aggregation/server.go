@@ -9,10 +9,10 @@ import (
 	"strings"
 	"time"
 
+	"github.com/caas-team/steve/pkg/auth"
 	"github.com/gorilla/websocket"
 	"github.com/rancher/remotedialer"
 	"github.com/sirupsen/logrus"
-	"gitlab.devops.telekom.de/caas/rancher/steve/pkg/auth"
 )
 
 const (

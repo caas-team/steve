@@ -1,16 +1,16 @@
 package schema
 
-//go:generate mockgen --build_flags=--mod=mod -package fake -destination fake/factory.go "gitlab.devops.telekom.de/caas/rancher/steve/pkg/schema" Factory
+//go:generate mockgen --build_flags=--mod=mod -package fake -destination fake/factory.go "github.com/caas-team/steve/pkg/schema" Factory
 import (
 	"context"
 	"fmt"
 	"net/http"
 	"time"
 
+	"github.com/caas-team/steve/pkg/accesscontrol"
+	"github.com/caas-team/steve/pkg/attributes"
 	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/builtin"
 	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
-	"gitlab.devops.telekom.de/caas/rancher/steve/pkg/accesscontrol"
-	"gitlab.devops.telekom.de/caas/rancher/steve/pkg/attributes"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apiserver/pkg/authentication/user"
 )

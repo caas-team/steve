@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
+	"github.com/caas-team/steve/pkg/accesscontrol"
 	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
-	"gitlab.devops.telekom.de/caas/rancher/steve/pkg/accesscontrol"
 	"k8s.io/apiserver/pkg/endpoints/request"
 )
 

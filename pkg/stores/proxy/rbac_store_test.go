@@ -3,11 +3,11 @@ package proxy
 import (
 	"testing"
 
+	"github.com/caas-team/steve/pkg/accesscontrol"
+	"github.com/caas-team/steve/pkg/stores/partition"
 	"github.com/rancher/wrangler/pkg/schemas"
 	"github.com/stretchr/testify/assert"
 	"gitlab.devops.telekom.de/caas/rancher/apiserver/pkg/types"
-	"gitlab.devops.telekom.de/caas/rancher/steve/pkg/accesscontrol"
-	"gitlab.devops.telekom.de/caas/rancher/steve/pkg/stores/partition"
 	"k8s.io/apimachinery/pkg/util/sets"
 )
 
