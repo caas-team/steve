@@ -7,7 +7,7 @@ import (
 )
 
 // debounceDuration determines how long events will be held before they are sent to the consumer
-var debounceDuration = 5 * time.Second
+var debounceDuration = 60 * time.Second
 
 // countsBuffer creates an APIEvent channel with a buffered response time (i.e. replies are only sent once every second)
 func countsBuffer(c chan Count) chan types.APIEvent {
