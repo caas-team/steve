@@ -15,7 +15,7 @@ import (
 	"github.com/caas-team/steve/pkg/resources/schemas"
 	schemafake "github.com/caas-team/steve/pkg/schema/fake"
 	"github.com/golang/mock/gomock"
-	v1schema "github.com/rancher/wrangler/pkg/schemas"
+	v1schema "github.com/rancher/wrangler/v2/pkg/schemas"
 	"github.com/stretchr/testify/assert"
 	"k8s.io/apiserver/pkg/authentication/user"
 	"k8s.io/apiserver/pkg/endpoints/request"

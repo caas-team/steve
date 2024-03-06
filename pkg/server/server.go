@@ -17,6 +17,7 @@ import (
 	"github.com/caas-team/steve/pkg/resources/common"
 	"github.com/caas-team/steve/pkg/resources/schemas"
 	"github.com/caas-team/steve/pkg/schema"
+	"github.com/caas-team/steve/pkg/schema/definitions"
 	"github.com/caas-team/steve/pkg/server/handler"
 	"github.com/caas-team/steve/pkg/server/router"
 	"github.com/caas-team/steve/pkg/summarycache"
@@ -141,6 +142,7 @@ func setup(ctx context.Context, server *Server) error {
 	if err = resources.DefaultSchemas(ctx, server.BaseSchemas, ccache, server.ClientFactory, sf, server.Version); err != nil {
 		return err
 	}
+	definitions.Register(server.BaseSchemas, server.controllers.K8s.Discovery())
 
 	summaryCache := summarycache.New(sf, ccache)
 	summaryCache.Start(ctx)

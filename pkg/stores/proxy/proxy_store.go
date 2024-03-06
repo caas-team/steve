@@ -5,6 +5,11 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"github.com/caas-team/apiserver/pkg/types"
+	"github.com/caas-team/steve/pkg/accesscontrol"
+	"github.com/caas-team/steve/pkg/attributes"
+	metricsStore "github.com/caas-team/steve/pkg/stores/metrics"
+	"github.com/caas-team/steve/pkg/stores/partition"
 	"io"
 	"io/ioutil"
 	"net/http"
@@ -12,16 +17,11 @@ import (
 	"regexp"
 	"strconv"
 
-	"github.com/caas-team/apiserver/pkg/types"
-	"github.com/caas-team/steve/pkg/accesscontrol"
-	"github.com/caas-team/steve/pkg/attributes"
-	metricsStore "github.com/caas-team/steve/pkg/stores/metrics"
-	"github.com/caas-team/steve/pkg/stores/partition"
 	"github.com/pkg/errors"
-	"github.com/rancher/wrangler/pkg/data"
-	corecontrollers "github.com/rancher/wrangler/pkg/generated/controllers/core/v1"
-	"github.com/rancher/wrangler/pkg/schemas/validation"
-	"github.com/rancher/wrangler/pkg/summary"
+	"github.com/rancher/wrangler/v2/pkg/data"
+	corecontrollers "github.com/rancher/wrangler/v2/pkg/generated/controllers/core/v1"
+	"github.com/rancher/wrangler/v2/pkg/schemas/validation"
+	"github.com/rancher/wrangler/v2/pkg/summary"
 	"github.com/sirupsen/logrus"
 	"golang.org/x/sync/errgroup"
 	"k8s.io/apimachinery/pkg/api/meta"
@@ -370,6 +370,7 @@ func (s *Store) WatchNames(apiOp *types.APIRequest, schema *types.APISchema, w t
 				} else {
 					logrus.Debugf("WatchNames received error: %v", item)
 				}
+				result <- item
 				continue
 			}
 

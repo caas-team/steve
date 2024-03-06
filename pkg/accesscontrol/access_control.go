@@ -4,7 +4,7 @@ import (
 	apiserver "github.com/caas-team/apiserver/pkg/server"
 	"github.com/caas-team/apiserver/pkg/types"
 	"github.com/caas-team/steve/pkg/attributes"
-	"github.com/rancher/wrangler/pkg/kv"
+	"github.com/rancher/wrangler/v2/pkg/kv"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 )
 

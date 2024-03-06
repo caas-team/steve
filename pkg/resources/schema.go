@@ -16,16 +16,15 @@ import (
 	"github.com/caas-team/steve/pkg/resources/formatters"
 	"github.com/caas-team/steve/pkg/resources/userpreferences"
 	"github.com/caas-team/steve/pkg/schema"
-	steveschema "github.com/caas-team/steve/pkg/schema"
 	"github.com/caas-team/steve/pkg/stores/proxy"
 	"github.com/caas-team/steve/pkg/summarycache"
-	corecontrollers "github.com/rancher/wrangler/pkg/generated/controllers/core/v1"
+	corecontrollers "github.com/rancher/wrangler/v2/pkg/generated/controllers/core/v1"
 	"k8s.io/apiserver/pkg/endpoints/request"
 	"k8s.io/client-go/discovery"
 )
 
 func DefaultSchemas(ctx context.Context, baseSchema *types.APISchemas, ccache clustercache.ClusterCache,
-	cg proxy.ClientGetter, schemaFactory steveschema.Factory, serverVersion string) error {
+	cg proxy.ClientGetter, schemaFactory schema.Factory, serverVersion string) error {
 	counts.Register(baseSchema, ccache)
 	subscribe.Register(baseSchema, func(apiOp *types.APIRequest) *types.APISchemas {
 		user, ok := request.UserFrom(apiOp.Context())

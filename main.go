@@ -6,7 +6,7 @@ import (
 	"github.com/caas-team/steve/pkg/debug"
 	stevecli "github.com/caas-team/steve/pkg/server/cli"
 	"github.com/caas-team/steve/pkg/version"
-	"github.com/rancher/wrangler/pkg/signals"
+	"github.com/rancher/wrangler/v2/pkg/signals"
 	"github.com/sirupsen/logrus"
 	"github.com/urfave/cli"
 )

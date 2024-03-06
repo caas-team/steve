@@ -1,15 +1,15 @@
 package proxy
 
 import (
-	"fmt"
+	"github.com/caas-team/apiserver/pkg/types"
+	"github.com/caas-team/steve/pkg/client"
 	"net/http"
+	"strings"
 	"testing"
 	"time"
 
-	"github.com/caas-team/apiserver/pkg/types"
-	"github.com/caas-team/steve/pkg/client"
 	"github.com/pkg/errors"
-	"github.com/rancher/wrangler/pkg/schemas"
+	"github.com/rancher/wrangler/v2/pkg/schemas"
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/sync/errgroup"
 	v1 "k8s.io/api/core/v1"
@@ -88,6 +88,7 @@ func receiveUntil(wc chan watch.Event, d time.Duration) error {
 	timer := time.NewTicker(d)
 	defer timer.Stop()
 	secretNames := []string{"testsecret1", "testsecret2"}
+	errMsgs := []string{"err1", "err2", "err3"}
 	for {
 		select {
 		case event, ok := <-wc:
@@ -96,7 +97,13 @@ func receiveUntil(wc chan watch.Event, d time.Duration) error {
 			}
 
 			if event.Type == watch.Error {
-				return errors.New(fmt.Sprintf("watch chan should not have sent events of type [%s]", watch.Error))
+				status, ok := event.Object.(*metav1.Status)
+				if !ok {
+					continue
+				}
+				if strings.HasSuffix(status.Message, errMsgs[0]) {
+					errMsgs = errMsgs[1:]
+				}
 			}
 			secret, ok := event.Object.(*v1.Secret)
 			if !ok {
@@ -105,7 +112,7 @@ func receiveUntil(wc chan watch.Event, d time.Duration) error {
 			if secret.Name == secretNames[0] {
 				secretNames = secretNames[1:]
 			}
-			if len(secretNames) == 0 {
+			if len(secretNames) == 0 && len(errMsgs) == 0 {
 				return nil
 			}
 			continue
