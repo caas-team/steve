@@ -1,4 +1,4 @@
-module github.com/rancher/steve
+module github.com/caas-team/steve
 
 go 1.19
 

@@ -7,11 +7,11 @@ import (
 	"sync"
 	"time"
 
+	"github.com/caas-team/steve/pkg/accesscontrol"
+	"github.com/caas-team/steve/pkg/schema"
 	"github.com/rancher/apiserver/pkg/builtin"
 	schemastore "github.com/rancher/apiserver/pkg/store/schema"
 	"github.com/rancher/apiserver/pkg/types"
-	"github.com/rancher/steve/pkg/accesscontrol"
-	"github.com/rancher/steve/pkg/schema"
 	"github.com/rancher/wrangler/pkg/broadcast"
 	"github.com/rancher/wrangler/pkg/schemas/validation"
 	"github.com/sirupsen/logrus"

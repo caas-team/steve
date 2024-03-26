@@ -3,8 +3,8 @@ package metrics
 import (
 	"time"
 
+	"github.com/caas-team/steve/pkg/metrics"
 	"github.com/rancher/apiserver/pkg/types"
-	"github.com/rancher/steve/pkg/metrics"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	k8stypes "k8s.io/apimachinery/pkg/types"

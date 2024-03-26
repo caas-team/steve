@@ -1,9 +1,9 @@
 package accesscontrol
 
 import (
+	"github.com/caas-team/steve/pkg/attributes"
 	apiserver "github.com/rancher/apiserver/pkg/server"
 	"github.com/rancher/apiserver/pkg/types"
-	"github.com/rancher/steve/pkg/attributes"
 	"github.com/rancher/wrangler/pkg/kv"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 )

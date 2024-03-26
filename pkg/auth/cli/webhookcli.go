@@ -4,7 +4,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/rancher/steve/pkg/auth"
+	"github.com/caas-team/steve/pkg/auth"
 	"github.com/urfave/cli"
 	"k8s.io/client-go/tools/clientcmd"
 )

@@ -10,8 +10,8 @@ import (
 	"strconv"
 	"testing"
 
+	"github.com/caas-team/steve/pkg/accesscontrol"
 	"github.com/rancher/apiserver/pkg/types"
-	"github.com/rancher/steve/pkg/accesscontrol"
 	corecontrollers "github.com/rancher/wrangler/pkg/generated/controllers/core/v1"
 	"github.com/rancher/wrangler/pkg/schemas"
 	"github.com/stretchr/testify/assert"
