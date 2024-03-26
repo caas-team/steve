@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
+	"github.com/caas-team/steve/pkg/client"
 	"github.com/pkg/errors"
 	"github.com/rancher/apiserver/pkg/types"
-	"github.com/rancher/steve/pkg/client"
 	"github.com/rancher/wrangler/pkg/schemas"
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/sync/errgroup"

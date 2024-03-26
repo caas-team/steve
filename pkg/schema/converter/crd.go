@@ -1,9 +1,9 @@
 package converter
 
 import (
+	"github.com/caas-team/steve/pkg/attributes"
+	"github.com/caas-team/steve/pkg/schema/table"
 	"github.com/rancher/apiserver/pkg/types"
-	"github.com/rancher/steve/pkg/attributes"
-	"github.com/rancher/steve/pkg/schema/table"
 	apiextv1 "github.com/rancher/wrangler/pkg/generated/controllers/apiextensions.k8s.io/v1"
 	"github.com/rancher/wrangler/pkg/schemas"
 	v1 "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"

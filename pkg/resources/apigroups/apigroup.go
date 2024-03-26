@@ -3,7 +3,7 @@ package apigroups
 import (
 	"net/http"
 
-	"github.com/rancher/steve/pkg/schema"
+	"github.com/caas-team/steve/pkg/schema"
 
 	"github.com/rancher/apiserver/pkg/store/empty"
 	"github.com/rancher/apiserver/pkg/types"

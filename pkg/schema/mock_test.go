@@ -5,7 +5,7 @@ import (
 	"encoding/hex"
 	"hash"
 
-	"github.com/rancher/steve/pkg/accesscontrol"
+	"github.com/caas-team/steve/pkg/accesscontrol"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apiserver/pkg/authentication/user"
 )
