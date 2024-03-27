@@ -3,8 +3,8 @@ package metrics
 import (
 	"time"
 
+	"github.com/caas-team/steve/pkg/metrics"
 	"github.com/rancher/apiserver/pkg/types"
-	"github.com/rancher/steve/pkg/metrics"
 )
 
 type Store struct {

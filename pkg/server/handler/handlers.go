@@ -1,10 +1,10 @@
 package handler
 
 import (
+	"github.com/caas-team/steve/pkg/attributes"
+	"github.com/caas-team/steve/pkg/schema"
 	"github.com/gorilla/mux"
 	"github.com/rancher/apiserver/pkg/types"
-	"github.com/rancher/steve/pkg/attributes"
-	"github.com/rancher/steve/pkg/schema"
 )
 
 func k8sAPI(sf schema.Factory, apiOp *types.APIRequest) {
