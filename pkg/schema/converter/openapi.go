@@ -1,8 +1,8 @@
 package converter
 
 import (
+	"github.com/caas-team/steve/pkg/attributes"
 	"github.com/rancher/apiserver/pkg/types"
-	"github.com/rancher/steve/pkg/attributes"
 	"github.com/rancher/wrangler/v2/pkg/data/convert"
 	"github.com/rancher/wrangler/v2/pkg/schemas"
 	"github.com/sirupsen/logrus"

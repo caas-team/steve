@@ -5,9 +5,9 @@ import (
 	"sync"
 	"time"
 
+	"github.com/caas-team/steve/pkg/attributes"
+	"github.com/caas-team/steve/pkg/schema"
 	"github.com/rancher/apiserver/pkg/types"
-	"github.com/rancher/steve/pkg/attributes"
-	"github.com/rancher/steve/pkg/schema"
 	"github.com/rancher/wrangler/v2/pkg/merr"
 	"github.com/rancher/wrangler/v2/pkg/summary/client"
 	"github.com/rancher/wrangler/v2/pkg/summary/informer"

@@ -1,8 +1,8 @@
 package table
 
 import (
+	"github.com/caas-team/steve/pkg/attributes"
 	types2 "github.com/rancher/apiserver/pkg/types"
-	"github.com/rancher/steve/pkg/attributes"
 	"github.com/rancher/wrangler/v2/pkg/data"
 	types "github.com/rancher/wrangler/v2/pkg/schemas"
 	"github.com/rancher/wrangler/v2/pkg/schemas/mappers"

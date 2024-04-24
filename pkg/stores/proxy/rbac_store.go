@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"sort"
 
+	"github.com/caas-team/steve/pkg/accesscontrol"
+	"github.com/caas-team/steve/pkg/attributes"
+	"github.com/caas-team/steve/pkg/stores/partition"
 	"github.com/rancher/apiserver/pkg/types"
-	"github.com/rancher/steve/pkg/accesscontrol"
-	"github.com/rancher/steve/pkg/attributes"
-	"github.com/rancher/steve/pkg/stores/partition"
 	"github.com/rancher/wrangler/v2/pkg/kv"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/util/sets"

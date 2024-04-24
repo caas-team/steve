@@ -3,8 +3,8 @@ package converter
 import (
 	"strings"
 
+	"github.com/caas-team/steve/pkg/attributes"
 	"github.com/rancher/apiserver/pkg/types"
-	"github.com/rancher/steve/pkg/attributes"
 	"github.com/rancher/wrangler/v2/pkg/merr"
 	"github.com/rancher/wrangler/v2/pkg/schemas"
 	"github.com/sirupsen/logrus"

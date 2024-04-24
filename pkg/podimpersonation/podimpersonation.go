@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/rancher/steve/pkg/stores/proxy"
+	"github.com/caas-team/steve/pkg/stores/proxy"
 	"github.com/rancher/wrangler/v2/pkg/condition"
 	"github.com/rancher/wrangler/v2/pkg/randomtoken"
 	"github.com/rancher/wrangler/v2/pkg/schemas/validation"

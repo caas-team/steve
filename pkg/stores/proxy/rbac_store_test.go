@@ -3,9 +3,9 @@ package proxy
 import (
 	"testing"
 
+	"github.com/caas-team/steve/pkg/accesscontrol"
+	"github.com/caas-team/steve/pkg/stores/partition"
 	"github.com/rancher/apiserver/pkg/types"
-	"github.com/rancher/steve/pkg/accesscontrol"
-	"github.com/rancher/steve/pkg/stores/partition"
 	"github.com/rancher/wrangler/v2/pkg/schemas"
 	"github.com/stretchr/testify/assert"
 	"k8s.io/apimachinery/pkg/util/sets"

@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
+	"github.com/caas-team/steve/pkg/auth"
 	"github.com/gorilla/websocket"
 	"github.com/rancher/remotedialer"
-	"github.com/rancher/steve/pkg/auth"
 	"github.com/sirupsen/logrus"
 )
 
